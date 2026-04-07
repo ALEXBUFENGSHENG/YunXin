@@ -91,4 +91,4 @@ uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 *   `scripts/`: 实用工具脚本（模型下载、数据修复等）。
 
 ---
-*Created by Trae AI Assistant*
+

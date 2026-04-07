@@ -52,6 +52,11 @@ model_cache/
 modelscope_cache/
 chat_history/
 
+# IDE
+.trae/
+.vscode/
+.idea/
+
 # OS generated files
 .DS_Store
 .DS_Store?

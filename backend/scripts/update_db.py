@@ -4,7 +4,7 @@ import os
 # 配置
 host = os.getenv('MYSQL_HOST', 'localhost')
 user = os.getenv('MYSQL_USER', 'root')
-password = os.getenv('MYSQL_PASSWORD', '@wqng15390441586')
+password = os.getenv('MYSQL_PASSWORD', 'your_database_password_here')
 database = os.getenv('MYSQL_DATABASE', 'ai_assistant')
 
 def update_database():

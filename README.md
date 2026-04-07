@@ -2,11 +2,11 @@
 
 > 一个集成了全双工语音通话、科学记忆算法与大模型思维链的下一代 AI 教学辅助平台。
 
-![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=flat&logo=vuedotjs&logoColor=%234FC08D)
-![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi)
-![Python](https://img.shields.io/badge/python-3670A0?style=flat&logo=python&logoColor=ffdd54)
-![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=flat&logo=mysql&logoColor=white)
-![LangChain](https://img.shields.io/badge/🦜🔗_LangChain-black)
+!\[Vue.js]\(<https://img.shields.io/badge/vuejs-%2335495e.svg?style=flat&logo=vuedotjs&logoColor=%234FC08D> null)
+!\[FastAPI]\(<https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi> null)
+!\[Python]\(<https://img.shields.io/badge/python-3670A0?style=flat&logo=python&logoColor=ffdd54> null)
+!\[MySQL]\(<https://img.shields.io/badge/mysql-%2300f.svg?style=flat&logo=mysql&logoColor=white> null)
+!\[LangChain]\(<https://img.shields.io/badge/🦜🔗_LangChain-black> null)
 
 ## 📁 项目构造 (Project Structure)
 
@@ -47,27 +47,30 @@ YunXinOne/
 ## 🛠 技术栈概览 (Tech Stack)
 
 ### 🖥️ 前端 (Frontend)
-*   **Core**: Vue 3 (Composition API) + Vite 5 
-*   **UI Framework**: Element Plus + Tailwind CSS
-*   **Network**: Axios (REST API) + **WebSocket** (全双工实时流)
-*   **Audio**: Web Audio API - 前端 VAD (语音活动检测) 与音频重采样
+
+- **Core**: Vue 3 (Composition API) + Vite 5
+- **UI Framework**: Element Plus + Tailwind CSS
+- **Network**: Axios (REST API) + **WebSocket** (全双工实时流)
+- **Audio**: Web Audio API - 前端 VAD (语音活动检测) 与音频重采样
 
 ### ⚙️ 后端 (Backend)
-*   **Framework**: FastAPI (Python 3.10+) - 高性能异步 Web 框架
-*   **Database**: MySQL 8.0
-*   **Architecture**: 基于 LangChain 编排，支持接入本地或云端 LLM
+
+- **Framework**: FastAPI (Python 3.10+) - 高性能异步 Web 框架
+- **Database**: MySQL 8.0
+- **Architecture**: 基于 LangChain 编排，支持接入本地或云端 LLM
 
 ### 🧠 人工智能与语音 (AI & Speech)
-*   **LLM Kernel**: 兼容 OpenAI 接口 (支持接入 DeepSeek-V3, Qwen, ChatGPT 或本地 Ollama)
-*   **ASR (语音识别)**: 阿里 FunASR (SenseVoiceSmall) - 本地毫秒级响应
-*   **TTS (语音合成)**: 微软 Edge-TTS - 免费且高度拟真
-*   **Memory Algorithm**: SM-2 间隔重复记忆算法 - 科学规划复习
+
+- **LLM Kernel**: 兼容 OpenAI 接口 (支持接入 DeepSeek-V3, Qwen, ChatGPT 或本地 Ollama)
+- **ASR (语音识别)**: 阿里 FunASR (SenseVoiceSmall) - 本地毫秒级响应
+- **TTS (语音合成)**: 微软 Edge-TTS - 免费且高度拟真
+- **Memory Algorithm**: SM-2 间隔重复记忆算法 - 科学规划复习
 
 ## ✨ 核心亮点 (Key Features)
 
-1.  **🗣️ 全双工实时语音通话 (Full-Duplex Call)**: 支持随时打断 (Barge-in)，模拟真人对话体验。
-2.  **🎓 科学记忆闭环**: 内置 SM-2 算法，背诵小达人模块可根据“忘记/模糊/认识”自动安排复习队列。
-3.  **🧠 高强度用脑模式**: 针对复杂理科或代码问题，自动触发 **CoT (思维链)**，执行“计划->执行->反思”三部曲。
+1. **🗣️ 全双工实时语音通话 (Full-Duplex Call)**: 支持随时打断 (Barge-in)，模拟真人对话体验。
+2. **🎓 科学记忆闭环**: 内置 SM-2 算法，背诵小达人模块可根据“忘记/模糊/认识”自动安排复习队列。
+3. **🧠 高强度用脑模式**: 针对复杂理科或代码问题，自动触发 **CoT (思维链)**，执行“计划->执行->反思”三部曲。
 
 ## ⚙️ 环境配置 (Configuration)
 
@@ -93,10 +96,11 @@ chmod +x run.sh
 ```
 
 **访问地址**:
-- 前端界面: [http://localhost:5080](http://localhost:5080)
-- 后端 API Docs: [http://localhost:8090/docs](http://localhost:8090/docs)
 
-*如果需要手动启动或部署，请参考 [DEPLOY.md](./DEPLOY.md) 和 [CALL_FRAMEWORK.md](./CALL_FRAMEWORK.md)。*
+- 前端界面: <http://localhost:5080>
+- 后端 API Docs: <http://localhost:8090/docs>
+
+*如果需要手动启动或部署，请参考* *[DEPLOY.md](./DEPLOY.md)* *和* *[CALL\_FRAMEWORK.md](./CALL_FRAMEWORK.md)。*
 
 ## 🤝 参与贡献 (Contributing)
 
@@ -106,5 +110,5 @@ chmod +x run.sh
 
 本项目基于 [MIT License](./LICENSE) 开源，允许自由使用、修改和分发。
 
----
-*Powered by Trae AI*
+***
+

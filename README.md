@@ -2,11 +2,11 @@
 
 > 一个集成了全双工语音通话、科学记忆算法与大模型思维链的下一代 AI 教学辅助平台。
 
-!\[Vue.js]\(<https://img.shields.io/badge/vuejs-%2335495e.svg?style=flat&logo=vuedotjs&logoColor=%234FC08D> null)
-!\[FastAPI]\(<https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi> null)
-!\[Python]\(<https://img.shields.io/badge/python-3670A0?style=flat&logo=python&logoColor=ffdd54> null)
-!\[MySQL]\(<https://img.shields.io/badge/mysql-%2300f.svg?style=flat&logo=mysql&logoColor=white> null)
-!\[LangChain]\(<https://img.shields.io/badge/🦜🔗_LangChain-black> null)
+![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=flat&logo=vuedotjs&logoColor=%234FC08D)
+![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi)
+![Python](https://img.shields.io/badge/python-3670A0?style=flat&logo=python&logoColor=ffdd54)
+![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=flat&logo=mysql&logoColor=white)
+![LangChain](https://img.shields.io/badge/🦜🔗_LangChain-black)
 
 ## 📁 项目构造 (Project Structure)
 

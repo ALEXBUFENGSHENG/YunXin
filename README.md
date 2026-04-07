@@ -1,6 +1,6 @@
-# 🤖 AI 智能助教 (AI Smart Assistant)
+# 🤖 AI Smart Assistant (YunXin)
 
-> 一个集成了全双工语音通话、科学记忆算法与大模型思维链的下一代 AI 教学辅助平台。
+> A next-generation AI teaching and learning platform integrating full-duplex voice calls, scientific memory algorithms, and Large Language Model (LLM) Chain of Thought reasoning.
 
 ![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=flat&logo=vuedotjs&logoColor=%234FC08D)
 ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi)
@@ -8,107 +8,103 @@
 ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=flat&logo=mysql&logoColor=white)
 ![LangChain](https://img.shields.io/badge/🦜🔗_LangChain-black)
 
-## 📁 项目构造 (Project Structure)
+## 📁 Project Structure
 
-本项目采用 **前后端分离** 的标准架构设计，结合微服务与领域驱动思想划分模块，以下是核心目录树说明：
+This project adopts a standard **Frontend-Backend Separation** architecture, combined with microservices and Domain-Driven Design (DDD) concepts to divide modules. Here is an overview of the core directory tree:
 
 ```text
 YunXinOne/
-├── backend/                  # ⚙️ FastAPI 后端服务目录
-│   ├── app/                  # 后端核心业务代码 (领域划分)
-│   │   ├── agents/           # LangChain 智能体与大模型逻辑编排
-│   │   ├── api/              # API 路由层 (Controllers)
-│   │   ├── config/           # 全局环境与配置管理
-│   │   ├── core/             # 核心组件 (鉴权、中间件等)
-│   │   ├── models/           # 数据库 ORM 模型与 Pydantic 实体类
-│   │   ├── repositories/     # 数据库访问层 (CRUD 操作)
-│   │   └── services/         # 业务逻辑服务层
-│   ├── main.py               # FastAPI 服务启动入口
-│   ├── mysql_storage.py      # MySQL 连接与存储底层实现
-│   └── requirements.txt      # Python 依赖清单
+├── backend/                  # ⚙️ FastAPI Backend Service Directory
+│   ├── app/                  # Core Business Logic (Domain Division)
+│   │   ├── agents/           # LangChain Agents & LLM Orchestration
+│   │   ├── api/              # API Routing Layer (Controllers)
+│   │   ├── config/           # Global Environment & Configuration
+│   │   ├── core/             # Core Components (Auth, Middleware, etc.)
+│   │   ├── models/           # Database ORM Models & Pydantic Entities
+│   │   ├── repositories/     # Data Access Layer (CRUD Operations)
+│   │   └── services/         # Business Logic Service Layer
+│   ├── main.py               # FastAPI Service Entry Point
+│   ├── mysql_storage.py      # MySQL Connection & Storage Implementation
+│   └── requirements.txt      # Python Dependencies List
 │
-├── frontend/                 # 🖥️ Vue 3 + Vite 前端服务目录
-│   ├── src/                  # 前端源代码 (组件、视图、状态管理等)
-│   ├── public/               # 静态资源文件
-│   ├── package.json          # Node.js 依赖与脚本
-│   ├── tailwind.config.js    # Tailwind CSS 样式配置
-│   └── vite.config.js        # Vite 构建与代理配置
+├── frontend/                 # 🖥️ Vue 3 + Vite Frontend Service Directory
+│   ├── src/                  # Frontend Source Code (Components, Views, State Management)
+│   ├── public/               # Static Assets
+│   ├── package.json          # Node.js Dependencies & Scripts
+│   ├── tailwind.config.js    # Tailwind CSS Configuration
+│   └── vite.config.js        # Vite Build & Proxy Configuration
 │
-├── model_cache/              # 🧠 本地深度学习模型缓存 (如 FunASR 语音模型)
-├── chat_history/             # 💬 会话与音频数据的本地持久化留存目录
-├── docker-compose.yml        # 🐳 容器化编排配置文件 (用于一键生产环境部署)
-├── run.sh                    # 🚀 本地开发环境一键启动/重启脚本
+├── model_cache/              # 🧠 Local Deep Learning Model Cache (e.g., FunASR)
+├── chat_history/             # 💬 Local Persistence Directory for Chat & Audio Data
+├── docker-compose.yml        # 🐳 Docker Compose Configuration (for 1-click Prod Deployment)
+├── run.sh                    # 🚀 1-click Start/Restart Script for Local Dev Environment
 │
-├── CALL_FRAMEWORK.md         # 📚 API 调用与前后端交互框架说明文档
-├── DEPLOY.md                 # 📚 生产环境服务器部署指南
-└── USER_MANUAL.md            # 📚 终端用户使用手册
+├── CALL_FRAMEWORK.md         # 📚 Documentation: API Calls & Frontend-Backend Interaction
+├── DEPLOY.md                 # 📚 Documentation: Production Deployment Guide
+└── USER_MANUAL.md            # 📚 Documentation: End-User Manual
 ```
 
-## 🛠 技术栈概览 (Tech Stack)
+## 🛠 Tech Stack Overview
 
-### 🖥️ 前端 (Frontend)
-
+### 🖥️ Frontend
 - **Core**: Vue 3 (Composition API) + Vite 5
 - **UI Framework**: Element Plus + Tailwind CSS
-- **Network**: Axios (REST API) + **WebSocket** (全双工实时流)
-- **Audio**: Web Audio API - 前端 VAD (语音活动检测) 与音频重采样
+- **Network**: Axios (REST API) + **WebSocket** (Full-Duplex Real-Time Stream)
+- **Audio**: Web Audio API - Frontend VAD (Voice Activity Detection) and Audio Resampling
 
-### ⚙️ 后端 (Backend)
-
-- **Framework**: FastAPI (Python 3.10+) - 高性能异步 Web 框架
+### ⚙️ Backend
+- **Framework**: FastAPI (Python 3.10+) - High-performance asynchronous Web framework
 - **Database**: MySQL 8.0
-- **Architecture**: 基于 LangChain 编排，支持接入本地或云端 LLM
+- **Architecture**: Orchestrated based on LangChain, supporting both local and cloud LLMs
 
-### 🧠 人工智能与语音 (AI & Speech)
+### 🧠 AI & Speech
+- **LLM Kernel**: OpenAI API Compatible (Supports DeepSeek-V3, Qwen, ChatGPT, or local Ollama)
+- **ASR (Speech Recognition)**: Alibaba FunASR (SenseVoiceSmall) - Local millisecond-level response
+- **TTS (Text-to-Speech)**: Microsoft Edge-TTS - Free and highly realistic
+- **Memory Algorithm**: SM-2 Spaced Repetition Algorithm - Scientifically schedules reviews
 
-- **LLM Kernel**: 兼容 OpenAI 接口 (支持接入 DeepSeek-V3, Qwen, ChatGPT 或本地 Ollama)
-- **ASR (语音识别)**: 阿里 FunASR (SenseVoiceSmall) - 本地毫秒级响应
-- **TTS (语音合成)**: 微软 Edge-TTS - 免费且高度拟真
-- **Memory Algorithm**: SM-2 间隔重复记忆算法 - 科学规划复习
+## ✨ Key Features
 
-## ✨ 核心亮点 (Key Features)
+1. **🗣️ Full-Duplex Real-Time Voice Call**: Supports "Barge-in" interruptions at any time, simulating a real human conversation experience.
+2. **🎓 Scientific Memory Loop**: Built-in SM-2 algorithm. The "Recitation Master" module automatically schedules review queues based on "Forget/Blurry/Know" self-assessments.
+3. **🧠 Deep Thinking Mode**: Automatically triggers **CoT (Chain of Thought)** for complex science or coding problems, executing the "Plan -> Execute -> Reflect" trilogy.
 
-1. **🗣️ 全双工实时语音通话 (Full-Duplex Call)**: 支持随时打断 (Barge-in)，模拟真人对话体验。
-2. **🎓 科学记忆闭环**: 内置 SM-2 算法，背诵小达人模块可根据“忘记/模糊/认识”自动安排复习队列。
-3. **🧠 高强度用脑模式**: 针对复杂理科或代码问题，自动触发 **CoT (思维链)**，执行“计划->执行->反思”三部曲。
+## ⚙️ Configuration
 
-## ⚙️ 环境配置 (Configuration)
+Before starting the project, you need to configure the relevant environment variables (such as Database Password, LLM API Key, etc.):
 
-在启动项目之前，您需要配置相关的环境变量（如数据库密码、大模型 API Key 等）：
-
-1. 进入 `backend` 目录，复制配置模板：
+1. Navigate to the `backend` directory and copy the configuration template:
    ```bash
    cd backend
    cp .env.example .env
    ```
-2. 编辑 `.env` 文件，填入您的实际参数：
-   - `DB_PASSWORD`: MySQL 数据库密码
-   - `LLM_API_KEY` / `OPENAI_API_KEY`: 您选择的大模型 API Key
+2. Edit the `.env` file and fill in your actual parameters:
+   - `DB_PASSWORD`: Your MySQL database password
+   - `LLM_API_KEY` / `OPENAI_API_KEY`: Your chosen Large Language Model API Key
 
-## 🚀 快速启动 (Quick Start)
+## 🚀 Quick Start
 
-我们提供了一个极为简便的一键启动脚本：
+We provide an extremely simple one-click startup script:
 
 ```bash
-# 赋予执行权限并启动
+# Grant execution permission and start
 chmod +x run.sh
 ./run.sh
 ```
 
-**访问地址**:
+**Access URLs**:
+- Frontend UI: [http://localhost:5080](http://localhost:5080)
+- Backend API Docs: [http://localhost:8090/docs](http://localhost:8090/docs)
 
-- 前端界面: <http://localhost:5080>
-- 后端 API Docs: <http://localhost:8090/docs>
+*For manual startup or deployment, please refer to [DEPLOY.md](./DEPLOY.md) and [CALL_FRAMEWORK.md](./CALL_FRAMEWORK.md).*
 
-*如果需要手动启动或部署，请参考* *[DEPLOY.md](./DEPLOY.md)* *和* *[CALL\_FRAMEWORK.md](./CALL_FRAMEWORK.md)。*
+## 🤝 Contributing
 
-## 🤝 参与贡献 (Contributing)
+Contributions of any kind are welcome! If you find a bug or have suggestions for new features, please help us improve by submitting an [Issue](#) or initiating a [Pull Request](#).
 
-欢迎任何形式的贡献！如果您发现了 Bug 或有新功能建议，请通过提交 [Issue](#) 或发起 [Pull Request](#) 来帮助我们改进。
+## 📄 License
 
-## 📄 开源协议 (License)
+This project is open-sourced under the [MIT License](./LICENSE), allowing for free use, modification, and distribution.
 
-本项目基于 [MIT License](./LICENSE) 开源，允许自由使用、修改和分发。
-
-***
-
+---
+*Powered by Trae AI*

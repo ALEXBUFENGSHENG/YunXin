@@ -107,4 +107,3 @@ Contributions of any kind are welcome! If you find a bug or have suggestions for
 This project is open-sourced under the [MIT License](./LICENSE), allowing for free use, modification, and distribution.
 
 ---
-*Powered by Trae AI*
